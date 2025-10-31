@@ -63,6 +63,10 @@ $$
 2. ``` console
    git clone https://github.com/juancc-00/vocabulary-cardgame
    ```
-3. cd vocabulary-cardgame
-4. python vocabulario.py 
+3. ``` console
+   cd vocabulary-cardgame
+   ```
+4. ``` console
+   python vocabulario.py
+   ```
 
