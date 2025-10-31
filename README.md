@@ -1,8 +1,8 @@
 # vocabulary-cardgame
 
-![demo](https://github.com/user-attachments/assets/867b600e-cc8a-498f-808b-dd797539412a)
-
 Este proyecto es un sencillo juego de repaso de vocabulario en inglés mediante tarjetas en CLI (línea de comandos).
+
+![demo](https://github.com/user-attachments/assets/867b600e-cc8a-498f-808b-dd797539412a)
 
 ---
 
@@ -43,7 +43,7 @@ Tú indicas si te sabías o no la palabra, y el programa actualiza las estadíst
 ## Cálculo de la probabilidad de aparición
 
 Cada palabra tiene un peso dinámico, que determina con qué frecuencia puede salir. El peso se calcula según el número de veces que has visto la palabra (seen) y las veces que la has acertado (success).
-
+$
 \[
 w = 
 \begin{cases} 
@@ -51,7 +51,7 @@ w =
 \max(0.1, 1 - \frac{success}{seen}) & \text{si } seen > 0
 \end{cases}
 \]
-
+$
 - Si nunca has visto la palabra, su peso es **1.0** (máxima probabilidad).  
 - Si la has visto varias veces y la aciertas a menudo, el peso **disminuye**.  
 - Nunca baja de **0.1**, para que todas las palabras sigan apareciendo de vez en cuando.
