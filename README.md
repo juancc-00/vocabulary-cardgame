@@ -43,10 +43,12 @@ Tú indicas si te sabías o no la palabra, y el programa actualiza las estadíst
 ## Cálculo de la probabilidad de aparición
 
 Cada palabra tiene un peso dinámico, que determina con qué frecuencia puede salir. El peso se calcula según el número de veces que has visto la palabra (seen) y las veces que la has acertado (success).
+
+
 $$
 w = 
 \begin{cases} 
-1.0 & \text{si } seen = 0 \\[2mm]
+1.0 & \text{si } seen = 0 \\
 \max(0.1, 1 - \frac{success}{seen}) & \text{si } seen > 0
 \end{cases}
 $$
@@ -54,18 +56,13 @@ $$
 - Si la has visto varias veces y la aciertas a menudo, el peso **disminuye**.  
 - Nunca baja de **0.1**, para que todas las palabras sigan apareciendo de vez en cuando.
 
-**Ejemplos:**
 
-1. Visto 5 veces, acertado 2 veces:
+## Requisitos y ejecución
 
-\[
-w = 1 - \frac{2}{5} = 0.6
-\]
-
-2. Visto 5 veces, acertado todas las veces:
-
-\[
-w = 1 - \frac{5}{5} = 0 \Rightarrow \max(0.1, 0) = 0.1
-\]
-
+1. Tener instalado python
+2. ``` console
+   git clone https://github.com/juancc-00/vocabulary-cardgame
+   ```
+3. cd vocabulary-cardgame
+4. python vocabulario.py 
 
