@@ -16,7 +16,7 @@ Este proyecto es un sencillo juego de repaso de vocabulario en inglés mediante 
 
    **Ejemplo:**
 
-   | new word | translation |
+   | english | spanish |
    |-----------|-------------|
    | To hoard     | Acumular    |
    | Allegedly    | Presuntamente |
